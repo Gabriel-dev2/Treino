@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+body {
+    padding: 10px auto 10px auto;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+header#cabecalho2 {
+    border-bottom: 1px solid #000000;
+    height: 150px;
+}
+
+header#cabecalho2 img#icone2 {
+    position: absolute;
+    left: 840px;
+    top: 40px;
+}
+
+header#cabecalho2 h1 {
+    font-family: 'Libre Baskerville';
+    font-size: 27pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+header#cabecalho2 h2 {
+    font-family: 'Titilium Web', sans-serif;
+    font-size: 14pt;
+    color: #888888;
+    margin-top: 0;
+    padding: 3px;
+}
+
+section#corpo2 {
+    display: block;
+    padding-top: 0px;
+}
+
+section#corpo2 h1 {
+
+}
+
+div#interface2 {
+    width: 1150px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+    padding: 10px;
+}
+
+article#principal2 {
+    text-align: center;
+    background: #ffffff;
+}
+
+header#cabecalhointro h1 {
+    font-family: 'Libre Baskerville',sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalhointro h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: white;
+    margin: 0px;
+}
+
+header#cabecalhointro h3 {
+    font-size: 11pt;
+    color: #606060;
+}
+
+.esquerda {
+    text-align: left;
+}
+

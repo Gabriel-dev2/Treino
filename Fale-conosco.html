@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="../Css/Estilo.css"/>
+    <link rel="stylesheet" href="../Css/Formu.css"/>
+</head>
+<script src="../_script/Function.js"></script>
+<body>
+<section id="capa">
+    <div id="interface">
+        <header id="cabecalho">
+            <h1>Comentário sobre o livro de Tiago</h1>
+
+            <h2>Tiago</h2>
+
+            <img  id="icone" src="../_imagens/fale-conosco.png"/>
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="disc">
+                    <li onmouseover="mudaImagem('../_imagens/icone-home.png')" onmouseout="mudaImagem('../_imagens/fale-conosco.png')"><a href="Pratica.html">Home</a></li>
+                    <li onmouseover="mudaImagem('../_imagens/lingua.png')" onmouseout="mudaImagem('../_imagens/fale-conosco.png')"><a href="Uso da Lingua.html">O uso da Língua</a></li>
+                    <li onmouseover="mudaImagem('../_imagens/lingua-controle2.png')" onmouseout="mudaImagem('../_imagens/fale-conosco.png')"><a href="Controle da Língua.html">Controle da Língua</a></li>
+                    <li onmouseover="mudaImagem('../_imagens/fale-conosco.png')" onmouseout="mudaImagem('../_imagens/fale-conosco.png')"><a href="Fale-conosco.html">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+    <article id="noticiaprincipal">
+        <header id="cabecalhoartigo">
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gabriel Lucas</h2>
+            <h3 class="direito">Atualizado em 23/Março/2018</h3>
+        </header>
+        <form method="post" id="fContato" action="mailto:gabriel23costalima@outlook.com" oninput="calc_total()">
+            <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"/></p>
+                <p><label for="cSenha">Senha:<input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/></label></p>
+                <p><label for="cEmail">E-mail:<input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="E-mail"/></label></p>
+                <fieldset id="sexo"><legend>Sexo:</legend>
+                    <input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label><br/>
+                    <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+                </fieldset>
+                <p><label for="cData">Data de Nascimento:</label><input type="date" name="tData" id="cData" size="12" maxlength="9" placeholder="dd/mm/aaa"/></p>
+            </fieldset>
+
+            <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                <p><label for="cLog">Logradouro:</label><input type="text" name="tLog" id="cLog" size="13" maxlength="80" placeholder="Rua,Av.,Trav"/></p>
+                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="1" max="9999" placeholder="Número"/></p>
+                <p><label for="cEsta">Estado:</label>
+                    <select name="tEsta" id="cEsta">
+                        <optgroup label="Região Sudeste">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="ES">Espirito Santo</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="PE">Pernambuco</option>
+                            <option value="CE">Ceará</option>
+                            <option value="BA">Bahia</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PI">Piauí</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                        <optgroup label="Região Norte">
+                            <option value="AM">Amazonas</option>
+                            <option value="AC">Acre</option>
+                            <option value="PA">Pará</option>
+                        </optgroup>
+
+                    </select></p>
+                <p><label for="cCity">Cidade:</label><input type="text" name="tCity" id="cCity" size="20" maxlength="40" placeholder="Cidade" list="cidades"/></p>
+                <datalist id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Igaçu"></option>
+                    <option value="Ipanema"></option>
+                    <option value="Olinda"></option>
+                    <option value="Recife"></option>
+                    <option value="Manaus"></option>
+                    <option value="Rio Branco"></option>
+                    <option value="João Pessoa"></option>
+                    <option value="Campina Grande"></option>
+                </datalist>
+            </fieldset>
+
+            <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label>
+                    Mín<input type="range" id="cUrg" min="0" max="10" step="2"/>Máx
+                </p>
+                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem."></textarea></p>
+            </fieldset>
+
+            <fieldset id="pedido"><legend>Quero um Comentário</legend>
+                <p><label for="cLivro">Livro:</label><input type="text" name="tLivro" id="cLivro" size="13" maxlength="35" placeholder="Livro Biblíco"></p>
+            </fieldset>
+
+            <input type="image" src="_imagens/botao-enviar.png"/>
+        </form>
+    </article>
+
+<footer id="rodape">
+    <p>Copyright &copy; 2018 - by Gabriel Lucas<br/>
+        <a href="http://facebook.com/profile.php?id=100002865170904" target="_blank" >Facebook</a> |
+        <a href="http://instagram.com/biel_baller11/" target="_blank">Instagram</a></p>
+</footer>
+
+</div>
+</section>
+</body>
+</html>
