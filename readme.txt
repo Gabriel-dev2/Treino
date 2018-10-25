@@ -1,0 +1,1 @@
+Se você está lendo isso parabéns, você sabe ler.
